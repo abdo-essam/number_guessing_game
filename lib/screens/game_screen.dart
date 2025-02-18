@@ -134,7 +134,7 @@ class _GameContentState extends State<_GameContent>
           children: [
             AnimatedFeedback(
               message: gameVM.feedback,
-              isSuccess: gameVM.gameWon,
+              feedbackType: gameVM.feedbackType,
             ),
             const SizedBox(height: 25),
             CustomTextField(

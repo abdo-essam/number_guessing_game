@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => GameViewModel(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Number Guessing Game',
         theme: ThemeData(
           primarySwatch: Colors.blue,

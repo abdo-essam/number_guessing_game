@@ -1,5 +1,6 @@
 import 'dart:math';
-import 'package:flutter/foundation.dart';
+
+import 'package:flutter/material.dart';
 
 class GameViewModel extends ChangeNotifier {
   final int _maxNumber = 100;
@@ -7,10 +8,15 @@ class GameViewModel extends ChangeNotifier {
   int _attempts = 0;
   String _feedback = '';
   bool _gameWon = false;
+  FeedbackType _feedbackType = FeedbackType.neutral;
 
   int get attempts => _attempts;
+
   String get feedback => _feedback;
+
   bool get gameWon => _gameWon;
+
+  FeedbackType get feedbackType => _feedbackType;
 
   GameViewModel() {
     startNewGame();
@@ -21,6 +27,7 @@ class GameViewModel extends ChangeNotifier {
     _attempts = 0;
     _feedback = 'Guess a number between 1 and $_maxNumber';
     _gameWon = false;
+    _feedbackType = FeedbackType.neutral;
     notifyListeners();
   }
 
@@ -30,6 +37,7 @@ class GameViewModel extends ChangeNotifier {
     int? number = int.tryParse(guess);
     if (number == null) {
       _feedback = 'Please enter a valid number';
+      _feedbackType = FeedbackType.error;
       notifyListeners();
       return;
     }
@@ -39,12 +47,23 @@ class GameViewModel extends ChangeNotifier {
     if (number == _targetNumber) {
       _gameWon = true;
       _feedback = 'Congratulations! You got it in $_attempts attempts!';
+      _feedbackType = FeedbackType.success;
     } else if (number < _targetNumber) {
-      _feedback = 'Try higher!';
+      _feedback = 'Too low! Try again.';
+      _feedbackType = FeedbackType.tooLow;
     } else {
-      _feedback = 'Try lower!';
+      _feedback = 'Too high! Try again.';
+      _feedbackType = FeedbackType.tooHigh;
     }
 
     notifyListeners();
   }
+}
+
+enum FeedbackType {
+  neutral,
+  tooHigh,
+  tooLow,
+  success,
+  error,
 }
