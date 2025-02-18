@@ -3,11 +3,14 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class GameViewModel extends ChangeNotifier {
+
   final int _maxNumber = 100;
   late int _targetNumber;
   int _attempts = 0;
   String _feedback = '';
   bool _gameWon = false;
+
+
   FeedbackType _feedbackType = FeedbackType.neutral;
 
   int get attempts => _attempts;

@@ -1,16 +1,18 @@
-# number_guessing_game
+# Flutter Number Guessing Game 🎮
 
-A new Flutter project.
+A beautiful and interactive number guessing game built with Flutter, featuring smooth animations and an engaging user interface.
 
-## Getting Started
+## 🎯 Features
 
-This project is a starting point for a Flutter application.
+- Clean and modern UI design
+- Smooth animations and transitions
+- Color-coded feedback messages
+- Attempt tracking
+- Responsive design
+- Separated business logic from UI
 
-A few resources to get you started if this is your first Flutter project:
+## 📱 Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Main Screen |
+|---|
+| <img src="screenshots/main.png" width="250"> |
