@@ -13,6 +13,6 @@ A beautiful and interactive number guessing game built with Flutter, featuring s
 
 ## 📱 Screenshots
 
-| Main Screen |
-|---|
-| <img src="screenshots/main.png" width="250"> |
+| Main Screen | Main Screen                                    | Main Screen | Main Screen | Main Screen |
+|---|------------------------------------------------|---|---|---|
+| <img src="screenshots/main.png" width="250"> | <img src="screenshots/higher.png" width="250"> | <img src="screenshots/lower.png" width="250"> | <img src="screenshots/success.png" width="250"> | <img src="screenshots/invalid_input.png" width="250"> |
